@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.upc.dto.TrabajoAreaDTO;
 import com.upc.exception.ModeloNotFoundException;
 import com.upc.model.entities.Trabajo;
 import com.upc.service.TrabajoService;
@@ -49,7 +50,7 @@ public class TrabajoController {
 	}
 
 	@PostMapping
-	public ResponseEntity<Trabajo> registrar(@Valid @RequestBody Trabajo trabajo) {
+	public ResponseEntity<Trabajo> registrar(@Valid @RequestBody TrabajoAreaDTO trabajo) {
 		Trabajo tra = new Trabajo();
 		tra = trabajoService.registrar(trabajo);
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(tra.getId())

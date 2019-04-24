@@ -13,6 +13,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 //http://localhost:8090/swagger-ui.html
+//https://apiparcial.herokuapp.com/swagger-ui.html
 
 @Configuration
 @EnableSwagger2
