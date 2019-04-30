@@ -24,10 +24,6 @@ public class Usuario {
 	@Size(min = 6, message = "la contraseña debe tener minimo 6 caracteres")
 	@Column(name = "password", nullable = false, length = 200)
 	private String password;
-	
-	@ManyToOne
-	@JoinColumn(name = "rol_id", nullable = false)
-	private Rol rol;
 
 	public Integer getId() {
 		return id;
@@ -52,15 +48,6 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	public Rol getRol() {
-		return rol;
-	}
-
-	public void setRol(Rol rol) {
-		this.rol = rol;
-	}
-
 	
 	
 }

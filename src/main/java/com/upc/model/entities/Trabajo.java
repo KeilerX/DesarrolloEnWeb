@@ -33,8 +33,12 @@ public class Trabajo {
 	private Float presupuesto;
 	
 	@ManyToOne
-	@JoinColumn(name = "perfil_id", nullable = false)
-	private Perfil perfil;
+	@JoinColumn(name = "portafolio_id", nullable = false)
+	private Portafolio portafolio;
+	
+	@ManyToOne
+	@JoinColumn(name = "contratador_id", nullable = false)
+	private Contratador contratador;
 
 	public Integer getId() {
 		return id;
@@ -76,12 +80,19 @@ public class Trabajo {
 		this.presupuesto = presupuesto;
 	}
 
-	public Perfil getPerfil() {
-		return perfil;
+	public Portafolio getPortafolio() {
+		return portafolio;
 	}
 
-	public void setPerfil(Perfil perfil) {
-		this.perfil = perfil;
+	public void setPortafolio(Portafolio portafolio) {
+		this.portafolio = portafolio;
 	}
-	
+
+	public Contratador getContratador() {
+		return contratador;
+	}
+
+	public void setContratador(Contratador contratador) {
+		this.contratador = contratador;
+	}
 }

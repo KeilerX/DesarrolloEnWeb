@@ -28,13 +28,32 @@ public class Oferta {
 	@Column(name = "oferta", nullable = false)
 	private Float oferta;
 	
-	@ManyToOne
-	@JoinColumn(name = "perfil_id", nullable = false)
-	private Perfil perfil;
+	@Column(name = "plazo", nullable = false)
+	private Integer plazo;
 	
 	@ManyToOne
 	@JoinColumn(name = "trabajo_id", nullable = false)
-	private Trabajo trabajo_id;
+	private Trabajo trabajo;
+	
+	@ManyToOne
+	@JoinColumn(name = "trabajador_id", nullable = false)
+	private Trabajo trabajador;
+
+	public Trabajo getTrabajo() {
+		return trabajo;
+	}
+
+	public void setTrabajo(Trabajo trabajo) {
+		this.trabajo = trabajo;
+	}
+
+	public Trabajo getTrabajador() {
+		return trabajador;
+	}
+
+	public void setTrabajador(Trabajo trabajador) {
+		this.trabajador = trabajador;
+	}
 
 	public Integer getId() {
 		return id;
@@ -67,21 +86,13 @@ public class Oferta {
 	public void setOferta(Float oferta) {
 		this.oferta = oferta;
 	}
-
-	public Perfil getPerfil() {
-		return perfil;
-	}
-
-	public void setPerfil(Perfil perfil) {
-		this.perfil = perfil;
-	}
-
+	
 	public Trabajo getTrabajo_id() {
-		return trabajo_id;
+		return trabajo;
 	}
 
-	public void setTrabajo_id(Trabajo trabajo_id) {
-		this.trabajo_id = trabajo_id;
+	public void setTrabajo_id(Trabajo trabajo) {
+		this.trabajo = trabajo;
 	}
 	
 }

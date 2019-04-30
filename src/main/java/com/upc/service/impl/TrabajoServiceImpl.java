@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.upc.dto.TrabajoAreaDTO;
 import com.upc.model.entities.Trabajo;
-import com.upc.model.entities.TrabajoArea;
 import com.upc.model.repository.TrabajoAreaRepository;
 import com.upc.model.repository.TrabajoRepository;
 import com.upc.service.TrabajoService;
