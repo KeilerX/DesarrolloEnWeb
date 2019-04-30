@@ -16,8 +16,8 @@ public class Contratador {
 	private Integer id;
 
 	@ManyToOne
-	@JoinColumn(name = "contratador_id", nullable = false)
-	private Persona contratador;
+	@JoinColumn(name = "persona_id", nullable = false)
+	private Persona persona;
 
 	public Integer getId() {
 		return id;
@@ -27,12 +27,12 @@ public class Contratador {
 		this.id = id;
 	}
 
-	public Persona getContratador() {
-		return contratador;
+	public Persona getPersona() {
+		return persona;
 	}
 
-	public void setContratador(Persona contratador) {
-		this.contratador = contratador;
+	public void setPersona(Persona persona) {
+		this.persona = persona;
 	}
 
 }

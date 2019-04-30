@@ -33,10 +33,6 @@ public class Trabajo {
 	private Float presupuesto;
 	
 	@ManyToOne
-	@JoinColumn(name = "portafolio_id", nullable = false)
-	private Portafolio portafolio;
-	
-	@ManyToOne
 	@JoinColumn(name = "contratador_id", nullable = false)
 	private Contratador contratador;
 
@@ -78,14 +74,6 @@ public class Trabajo {
 
 	public void setPresupuesto(Float presupuesto) {
 		this.presupuesto = presupuesto;
-	}
-
-	public Portafolio getPortafolio() {
-		return portafolio;
-	}
-
-	public void setPortafolio(Portafolio portafolio) {
-		this.portafolio = portafolio;
 	}
 
 	public Contratador getContratador() {

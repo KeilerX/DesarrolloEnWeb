@@ -19,6 +19,18 @@ public class Portafolio {
 	@JoinColumn(name = "trabajador_id", nullable = false)
 	private Trabajador trabajador;
 
+	@ManyToOne
+	@JoinColumn(name = "trabajo_id", nullable = false)
+	private Trabajo trabajo;
+	
+	public Trabajo getTrabajo() {
+		return trabajo;
+	}
+
+	public void setTrabajo(Trabajo trabajo) {
+		this.trabajo = trabajo;
+	}
+
 	public Integer getId() {
 		return id;
 	}
