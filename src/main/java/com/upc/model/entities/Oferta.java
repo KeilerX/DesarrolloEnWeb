@@ -39,30 +39,6 @@ public class Oferta {
 	@JoinColumn(name = "trabajador_id", nullable = false)
 	private Trabajador trabajador;
 
-	public Trabajo getTrabajo() {
-		return trabajo;
-	}
-
-	public void setTrabajo(Trabajo trabajo) {
-		this.trabajo = trabajo;
-	}
-
-	public Integer getPlazo() {
-		return plazo;
-	}
-
-	public void setPlazo(Integer plazo) {
-		this.plazo = plazo;
-	}
-
-	public Trabajador getTrabajador() {
-		return trabajador;
-	}
-
-	public void setTrabajador(Trabajador trabajador) {
-		this.trabajador = trabajador;
-	}
-
 	public Integer getId() {
 		return id;
 	}
@@ -94,13 +70,29 @@ public class Oferta {
 	public void setOferta(Float oferta) {
 		this.oferta = oferta;
 	}
-	
-	public Trabajo getTrabajo_id() {
+
+	public Integer getPlazo() {
+		return plazo;
+	}
+
+	public void setPlazo(Integer plazo) {
+		this.plazo = plazo;
+	}
+
+	public Trabajo getTrabajo() {
 		return trabajo;
 	}
 
-	public void setTrabajo_id(Trabajo trabajo) {
+	public void setTrabajo(Trabajo trabajo) {
 		this.trabajo = trabajo;
+	}
+
+	public Trabajador getTrabajador() {
+		return trabajador;
+	}
+
+	public void setTrabajador(Trabajador trabajador) {
+		this.trabajador = trabajador;
 	}
 	
 }
